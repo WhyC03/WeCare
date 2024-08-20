@@ -24,3 +24,7 @@ To deploy the machine Learning Mobile run
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
+## Team Members --
+
+Sayan Mandal, Yash Chandra, Souradeep Bagchi, Snehansu Behera and Vivek Purbey. 
+
