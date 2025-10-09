@@ -1,0 +1,39 @@
+:root{
+  --bg:#ffffff; --text:#111827; --muted:#6B7280; --border:#E5E7EB; --brand:#10B981;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%;}
+body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--text);background:var(--bg)}
+
+.app{display:flex;flex-direction:column;height:100%}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:5}
+.brand{font-weight:700;color:#111;display:flex;align-items:center}
+.brand::before{content:"✔";margin-right:8px;color:var(--brand)}
+.menu{background:none;border:none;font-size:20px;cursor:pointer}
+
+.toolbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border)}
+.title{font-weight:600}
+.badge{margin-left:8px;background:#F3F4F6;border:1px solid var(--border);border-radius:12px;padding:2px 8px;font-size:12px;color:var(--muted)}
+.controls{display:flex;gap:12px;align-items:center}
+.search input{height:32px;border:1px solid var(--border);border-radius:6px;padding:0 10px;min-width:260px}
+
+.filters{position:relative}
+.filters-btn{height:32px;border:1px solid var(--border);border-radius:6px;padding:0 10px;background:#fff;cursor:pointer}
+.filters:hover .filters-menu{display:block}
+.filters-menu{display:none;position:absolute;top:36px;left:0;background:#fff;border:1px solid var(--border);border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,0.08);min-width:160px;z-index:10}
+.filters-menu > div{padding:8px 10px;cursor:pointer}
+.filters-menu > div:hover{background:#F9FAFB}
+
+.table-container{flex:1;overflow:auto}
+.table{width:100%;border-collapse:separate;border-spacing:0}
+.table thead th{font-weight:600;text-align:left;font-size:14px;color:#4B5563;background:#F9FAFB;border-bottom:1px solid var(--border);padding:12px}
+.table thead th.sortable{cursor:pointer}
+.table thead.sticky{position:sticky;top:97px;z-index:4}
+.table tbody td{padding:12px;border-bottom:1px solid var(--border);vertical-align:middle}
+.row:hover{background:#F9FAFB}
+.customer{display:flex;gap:10px;align-items:center}
+.avatar{border-radius:50%;border:1px solid var(--border)}
+.c-meta{display:flex;flex-direction:column}
+.c-name{font-weight:600}
+.c-sub{color:var(--muted);font-size:12px}
+.loading{padding:16px;text-align:center;color:var(--muted)}
